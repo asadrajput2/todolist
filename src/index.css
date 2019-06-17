@@ -12,12 +12,11 @@ body {
 
 @media only screen and (min-width: 600px) {
   .container {
-    width: 400px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-
 
 .info {
   color: white;
@@ -25,61 +24,82 @@ body {
 }
 
 .info > a {
-  color: #fee851;
+  color: #35b997;
 }
 
 input {
-  border: 1px #f0e995 solid;
+  border: 1px #808080 solid;
   background: none;
-  color: #f0e995;
+  color: #f0f0f0;
   padding: 10px;
+  transition: background 0.5s, border 0.5s;
+  transition-timing-function: ease-in;
 }
 
-input + button {
-  border-right: none; 
+input:hover {
+  border: 1px #808080 solid;
+  background: #323232;
 }
 
 button {
-  border: 1px #f0e995 solid;
-  background: white;
+  border: 1px #f0f0f0 solid;
+  background: #f0f0f0;
   color: #333;
   padding: 10px;  
   border-left: none;
+  user-select: none;
+  transition: background 0.4s, color 0.4s;
+  transition-timing-function: ease-in;
 }
 
 button:hover {
-  background: #333;
-  color: white;
-  border-left: none;
+  background: #0092cc;
+  color: #f0f0f0;
+  border: #0f89ca;
 }
 
 .form {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.block {
   width: 100%;
 }
 
 .item {
   margin-top: 10px;
-  background: #fee851;
-  color: #333;
+  background: #08b9a5;
+  color: #323232;
   padding: 10px;
   word-wrap: break-word; 
   width: inherit; 
   border-radius: 3%;
+  transition: background 0.4s;
+  transition-timing-function: ease-in;
 }
 
 .item:hover {
-  background: #fffc81;
+  background: #0f89ca;
 }
 
 .close {
-  display: inline;
-  float: right;
-  font-size: 9px;
+  display: inline-flex;
+  float: inline-end;
+  border-radius: 3%;
+  user-select: none;
+  min-height: inherit;
+  height: inherit;
   padding: 5px;
-  border-radius: 5%;
+  padding-top: 0;
+  animation-name: 'close';
+  animation-duration: 1s;
+  transition-timing-function: ease-in;
+  transition: color 1s;
+  cursor: pointer;
 }
 
-.close:hover {
-  background: #ee573d; 
+.item:hover > .close {
+  color: #ee573d;
   cursor: pointer;
 }

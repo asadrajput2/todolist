@@ -41,27 +41,31 @@ class ToDoList extends React.Component {
 
   render() {  
     return (
-      <div>
+      <div class="block">
         <div class="info">
           Fork me on <a href="https://github.com/darkninja3/todolist">Github</a>
         </div>
+
         <form class="form" onSubmit={this.addItem}>
           <input type="text" ref={(input) => { this.input = input }}
-                  placeholder="add item" />
+                  placeholder="Add Item" />
           <button type="submit">Add</button>
         </form>
+        
         <div class="list">
           {this.state.list_arr.map(
             (a, i, arr) =>
               <div key={i} class="item">
                 {a}
-                <div class="close"
+              
+                <span class="close"
                       onClick={(e) => this.removeItem(i)}>
                   &times;
-                </div>
+                </span>
               </div>
           )}
         </div>
+
       </div>
     )
   }
