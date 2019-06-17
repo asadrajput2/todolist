@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 
+
 class ToDoList extends React.Component {
   constructor(props) {
     super(props)
@@ -16,9 +17,10 @@ class ToDoList extends React.Component {
     e.preventDefault()
     this.setState( 
       function (state) {
-        if (this.input.value) {
+        if (this.input.value) //adds value to array if there is some value in the textbox
+        {
           state.list_arr.unshift(this.input.value)
-          this.input.value =""
+          this.input.value = ""
         }
         const list_arr = state.list_arr
         return { list_arr: list_arr }
@@ -26,6 +28,7 @@ class ToDoList extends React.Component {
     )
   }
 
+  // removes an item when clicked on 'x'
   removeItem(i) {
     this.setState(
       (state) => {
