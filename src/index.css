@@ -18,6 +18,16 @@ body {
   }
 }
 
+
+.info {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.info > a {
+  color: #fee851;
+}
+
 input {
   border: 1px #f0e995 solid;
   background: none;

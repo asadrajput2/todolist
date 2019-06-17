@@ -39,6 +39,9 @@ class ToDoList extends React.Component {
   render() {  
     return (
       <div>
+        <div class="info">
+          Fork me on <a href="https://github.com/darkninja3/todolist">Github</a>
+        </div>
         <form class="form" onSubmit={this.addItem}>
           <input type="text" ref={(input) => { this.input = input }}
                   placeholder="add item" />
