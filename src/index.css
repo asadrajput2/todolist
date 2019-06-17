@@ -84,16 +84,12 @@ button:hover {
 }
 
 .close {
-  display: inline-flex;
-  float: inline-end;
+  display: inline;
+  float: right;
   border-radius: 3%;
   user-select: none;
-  min-height: inherit;
-  height: inherit;
   padding: 5px;
   padding-top: 0;
-  animation-name: 'close';
-  animation-duration: 1s;
   transition-timing-function: ease-in;
   transition: color 1s;
   cursor: pointer;
